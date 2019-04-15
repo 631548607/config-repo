@@ -1,0 +1,13 @@
+zuul:
+  routes:
+#  /myRoute/product/list -> /product/product/list（myRoute指向product服务）
+    myRoute:
+      path: /myRoute/**
+      serviceId: product
+#      敏感头的过滤
+      sensitiveHeaders:
+#      排除某些路由
+  ignored-patterns:
+    - /**/product/getProductInfo
+#      简洁写法
+#   product: /myRoute/**

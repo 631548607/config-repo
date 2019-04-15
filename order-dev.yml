@@ -14,9 +14,10 @@ spring:
     port: 5672
     username: guest
     password: guest
+  redis:
+    host: 127.0.0.1
+    port: 6379
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-env:
-  dev
